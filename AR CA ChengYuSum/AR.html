@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AR </title>
+
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <script src="ARchengyusum/AR.js"></script>
+
+</head>
+
+<body style="margin: 0; overflow: hidden;">
+    <a-scene embedded arjs>
+
+        <a-marker type='pattern' url='mymarker.patt/shuishen.patt'>
+           
+            <a-entity position="0 0 0">
+               
+                <a-video src='url(video/芙芙.mp4)' width="6" height='3' position='-2.5 0 -1' rotation='90 180 0'
+                    visable="false" volume="0"> </a-video>
+             
+            </a-entity>
+        </a-marker>
+        <a-marker type='pattern' url='mymarker.patt/纯水.patt'>
+            <a-entity gltf-model='url(models/純水.glb)' scale='2 2 2' rotation="0 270 90" position="-3 2 -1"  animation="property: position; to: -3 3 -2; dir: alternate; dur: 5000; loop: true">
+
+            </a-entity>
+
+        </a-marker>
+        <a-marker type='pattern' url='mymarker.patt/飞鸟.patt'>
+            <a-entity gltf-model='url(models/birds/scene.gltf)' scale='2 1 2' rotation="0 270 90" position="-3 0 -4">
+
+            </a-entity>
+
+        </a-marker>
+        
+        <a-marker type='pattern' url='mymarker.patt/愿望.patt'>
+            <a-entity gltf-model='url(models/wave.glb)' scale='2 4 4' rotation="0 270 90" position="-3 1 -1">
+
+            </a-entity>
+
+        </a-marker>
+        <a-marker type='pattern' url='mymarker.patt/神眼.patt'>
+            <a-entity gltf-model='url(models/水眼.glb)' scale='1 1 1' rotation="0 270 90" position="-2 1 -2" animation="property: rotation; to: 360 270 90; loop: true; dur: 5000">
+
+            </a-entity>
+
+        </a-marker>
+        <a-marker type='pattern' url='mymarker.patt/xuying.patt'>
+            <a-entity position="0 0 0">
+                
+                <a-video src='url(video/消失.mp4)' width="6" height='3' position='-2.5 0 -1' rotation='90 180 0'
+                    visable="false" volume="0"> </a-video>
+                
+            </a-entity>
+        </a-marker>
+        
+        <a-entity camera></a-entity>
+
+
+    </a-scene>
+
+</body>
+
+</html>
+
+</html>
